@@ -10,7 +10,7 @@ Learning Outcomes:
 - Use Grid and Flexbox to achieve more complex page layouts
 - Incorporate media queries into the responsive design
 
-————
+——
 - Relative and absolute positioning are used correctly with the icons.
 - CSS Grid and FlexBox are used together to create the layout.
 - Grid template areas are used correctly to display items at different positions in different viewports.
@@ -29,4 +29,3 @@ Learning Outcomes:
 - The common components in multiple pages are consistent.
 
 
-———— pull request test
