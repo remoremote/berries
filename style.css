@@ -111,9 +111,9 @@
   
   
   
-  /* ——————— Desktop ——————— */
+  /* ——————— ________ ——————— ________ ——————— */
   
-  
+  /* ——————— Main Grid ——————— */
   .grid-container {
      padding: 0 var(--space-128);
      max-width: calc(12 * var(--space-128));
@@ -124,6 +124,8 @@
      height: 100%;
      align-content: space-between;
    }
+
+  /* ——————— Nav ——————— */
     .nav {
      display: flex;
      flex-direction: row;
@@ -131,18 +133,16 @@
      align-items: center;
      grid-column: 1 / span 6;
      padding: var(--space-24) 0;
+     margin-bottom: var(--space-64);
    }
-  
   
    .nav img {
      height: 40px;
    }
   
-  
    .nav-links > :nth-child(1){
      margin-right: var(--space-24);
    }
-  
   
    .nav button {
      font-size: var(--font-size-button-2);
@@ -152,15 +152,16 @@
    }
   
   
-   /* ——————— Hero ——————— */
+  /* ——————— Hero ——————— */
     .hero {
      display: grid;
      grid-template-columns: repeat(6, 1fr);
      gap: var(--space-48);
      grid-column: 1 / span 6;
+     margin-bottom: var(--space-64);
    }
+
     .hero-copy {
-     padding: var(--space-8);
      grid-column: 1 / span 3;
    }
     .hero-img {
@@ -169,12 +170,13 @@
      align-self: center;
    }
   
-  
    .hero-img img {
      width: 100%;
      max-width: calc(6 * var(--space-128));
      border-radius: var(--space-48);
    }
+
+  /* ——————— Cards ——————— */
     .cards {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -198,7 +200,7 @@
      right: 0;
    }
   
-  
+ /* ——————— Footer ——————— */
    .footer img {
      height: 40px;
    }
