@@ -1,199 +1,209 @@
 :root {
-/* ——————— Color ——————— */
---background: #F5F3EF;
---card: #FFFFFF;
---accent: #FEBD2F;
-/* Font */
---text-primary: #000000;
---text-secondary: #646464;
-/* Other */
---outline: #DCDCDC;
-
-/* ——————— Typography ——————— */
-/* Fonts */
---font-family-primary: 'Roboto Serif', serif;
---font-family-secondary: 'Roboto', sans-serif;
-/* Sizes */
---font-size-h1: 64px;
---font-size-h2: 40px;
---font-size-h3: 24px;
---font-size-P1: 24px;
---font-size-P2: 18px;
---font-size-Button-1: 18px;
---font-size-Button-2: 16px;
-/* Weights */
---font-weight-h1: 500;
---font-weight-h2: 500;
---font-weight-h3: 700;
---font-weight-P1: 400;
---font-weight-P2: 400;
---font-weight-Button-1: 500;
---font-weight-Button-2: 500;
-
-/* ——————— Space ——————— */
---space-8: 10px;
---space-16: 16px;
---space-24: 24px;
---space-32: 32px;
---space-48: 48px;
---space-64: 64px;
---space-96: 96px;
---space-128: 128px;
-}
-
-
-/* ——————— initial setup ————————— */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-P2);
-  font-weight: var(--font-weight-P2);
-  background-color: var(--background);
-}
-
-
-/* ——————— Basic Styles ——————— */
-h1 {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-h1);
+  /* ——————— Color ——————— */
+  --background: #F5F3EF;
+  --card: #FFFFFF;
+  --accent: #FEBD2F;
+  /* Font */
+  --text-primary: #000000;
+  --text-secondary: #646464;
+  /* Other */
+  --outline: #DCDCDC;
+  
+  
+  /* ——————— Typography ——————— */
+  /* Fonts */
+  --font-family-primary: 'Roboto Serif', serif;
+  --font-family-secondary: 'Roboto', sans-serif;
+  /* Sizes */
+  --font-size-h1: 64px;
+  --font-size-h2: 40px;
+  --font-size-h3: 24px;
+  --font-size-P1: 24px;
+  --font-size-P2: 18px;
+  --font-size-Button-1: 18px;
+  --font-size-Button-2: 16px;
+  /* Weights */
+  --font-weight-h1: 500;
+  --font-weight-h2: 500;
+  --font-weight-h3: 700;
+  --font-weight-P1: 400;
+  --font-weight-P2: 400;
+  --font-weight-Button-1: 500;
+  --font-weight-Button-2: 500;
+  
+  
+  /* ——————— Space ——————— */
+  --space-8: 10px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-128: 128px;
   }
   
-  h2 {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-h2);
+  
+  
+  
+  /* ——————— initial setup ————————— */
+  html,
+  body {
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   font-family: var(--font-family-secondary);
+   font-size: var(--font-size-P2);
+   font-weight: var(--font-weight-P2);
+   background-color: var(--background);
   }
   
-  h3 {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-h3);
-  }
-
-  button {
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-button-1);
-    font-weight: var(--font-weight-button-1);
-    background-color: var(--card);
-    padding: var(--space-8) var(--space-24);
-    border: 1px solid var(--outline);
-    border-radius: var(--space-48);
-  }
-
-  p {
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-P1);
-    font-weight: var(--font-weight-P1);
-    color: var(--text-secondary);
-  }
-
-  a {
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-button-2);
-    font-weight: var(--font-weight-Button-2);
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-
-
-
-/* ——————— Desktop ——————— */
-
-.grid-container {
-    padding: 0 var(--space-128);
-    max-width: calc(12 * var(--space-128));
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--space-24);
-    height: 100%; 
-    align-content: space-between;
-  }
   
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    grid-column: 1 / span 6;
-    padding: var(--space-24) 0;
-  }
-
-  .nav img {
-    height: 40px;
-  }
-
-  .nav-links > :nth-child(1){
-    margin-right: var(--space-24);
-  }
-
-  .nav button {
-    font-size: var(--font-size-button-2);
-    font-weight: var(--font-weight-button-2);
-    background-color: var(--text-primary);
-    color: var(--card);
-  }
-
-  /* ——————— Hero ——————— */
   
-  .hero {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--space-48);
-    grid-column: 1 / span 6;
-  }
   
-  .hero-copy {
-    padding: var(--space-8);
-    grid-column: 1 / span 3;
-  }
+  /* ——————— Basic Styles ——————— */
+  h1 {
+     font-family: var(--font-family-primary);
+     font-size: var(--font-size-h1);
+     font-weight: var(--font-weight-h1);
+   }
+    h2 {
+     font-family: var(--font-family-primary);
+     font-size: var(--font-size-h2);
+     font-weight: var(--font-weight-h2);
+   }
+    h3 {
+     font-family: var(--font-family-primary);
+     font-size: var(--font-size-h3);
+     font-weight: var(--font-weight-h3);
+   }
   
-  .hero-img {
-    grid-column: 4 / span 6;
-    justify-self: end;
-    align-self: center;
-  }
-
-  .hero-img img {
-    width: 100%;
-    max-width: calc(6 * var(--space-128));
-    border-radius: var(--space-48);
-  }
   
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: var(--space-24);
-    grid-column: 1 / span 6;
-  }
+   button {
+     font-family: var(--font-family-secondary);
+     font-size: var(--font-size-button-1);
+     font-weight: var(--font-weight-button-1);
+     background-color: var(--card);
+     padding: var(--space-8) var(--space-24);
+     border: 1px solid var(--outline);
+     border-radius: var(--space-48);
+   }
   
-  .card {
-    background-color: #bbb;
-    text-align: center;
-    padding: var(--space-8);
-  }
   
-  .footer {
-    grid-column: 1 / span 6;
-    background-color: var(--accent);
-    text-align: center;
-    padding: var(--space-8);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .footer img {
-    height: 40px;
-  }
+   p {
+     font-family: var(--font-family-secondary);
+     font-size: var(--font-size-P1);
+     font-weight: var(--font-weight-P1);
+     color: var(--text-secondary);
+   }
   
-
   
-
-  /* note for future me: use button-2 and P2 for media queries. thanks, bye */
+   a {
+     font-family: var(--font-family-secondary);
+     font-size: var(--font-size-button-2);
+     font-weight: var(--font-weight-Button-2);
+     color: var(--text-primary);
+     text-decoration: none;
+   }
+  
+  
+  
+  
+  
+  
+  /* ——————— Desktop ——————— */
+  
+  
+  .grid-container {
+     padding: 0 var(--space-128);
+     max-width: calc(12 * var(--space-128));
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     gap: var(--space-24);
+     height: 100%;
+     align-content: space-between;
+   }
+    .nav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     grid-column: 1 / span 6;
+     padding: var(--space-24) 0;
+   }
+  
+  
+   .nav img {
+     height: 40px;
+   }
+  
+  
+   .nav-links > :nth-child(1){
+     margin-right: var(--space-24);
+   }
+  
+  
+   .nav button {
+     font-size: var(--font-size-button-2);
+     font-weight: var(--font-weight-button-2);
+     background-color: var(--text-primary);
+     color: var(--card);
+   }
+  
+  
+   /* ——————— Hero ——————— */
+    .hero {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     gap: var(--space-48);
+     grid-column: 1 / span 6;
+   }
+    .hero-copy {
+     padding: var(--space-8);
+     grid-column: 1 / span 3;
+   }
+    .hero-img {
+     grid-column: 4 / span 6;
+     justify-self: end;
+     align-self: center;
+   }
+  
+  
+   .hero-img img {
+     width: 100%;
+     max-width: calc(6 * var(--space-128));
+     border-radius: var(--space-48);
+   }
+    .cards {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: var(--space-24);
+     grid-column: 1 / span 6;
+   }
+    .card {
+     background-color: #bbb;
+     text-align: center;
+     padding: var(--space-8);
+   }
+    .footer {
+     grid-column: 1 / span 6;
+     background-color: var(--accent);
+     text-align: center;
+     padding: var(--space-8);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+   }
+  
+  
+   .footer img {
+     height: 40px;
+   }
+  
+  
+  
+  
+   /* note for future me: use button-2 and P2 for media queries. thanks, bye */
