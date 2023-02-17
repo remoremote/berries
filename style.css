@@ -1,246 +1,291 @@
 :root {
-  /* ——————— Color ——————— */
-  --background: #F5F3EF;
-  --card: #FFFFFF;
-  --accent: #FEBD2F;
-  /* Font */
-  --text-primary: #000000;
-  --text-secondary: #646464;
-  /* Other */
-  --outline: #DCDCDC;
-  
-  
-  /* ——————— Typography ——————— */
-  /* Fonts */
-  --font-family-primary: 'Roboto Serif', serif;
-  --font-family-secondary: 'Roboto', sans-serif;
-  /* Sizes */
-  --font-size-h1: 64px;
-  --font-size-h2: 40px;
-  --font-size-h3: 24px;
-  --font-size-P1: 24px;
-  --font-size-P2: 18px;
-  --font-size-Button-1: 18px;
-  --font-size-Button-2: 16px;
-  /* Weights */
-  --font-weight-h1: 500;
-  --font-weight-h2: 500;
-  --font-weight-h3: 700;
-  --font-weight-P1: 400;
-  --font-weight-P2: 400;
-  --font-weight-Button-1: 500;
-  --font-weight-Button-2: 500;
-  
-  
-  /* ——————— Space ——————— */
-  --space-8: 10px;
-  --space-16: 16px;
-  --space-24: 24px;
-  --space-32: 32px;
-  --space-48: 48px;
-  --space-64: 64px;
-  --space-96: 96px;
-  --space-128: 128px;
+ /* ——————— Color ——————— */
+ --background: #F5F3EF;
+ --card: #FFFFFF;
+ --accent: #FEBD2F;
+ /* Font */
+ --text-primary: #000000;
+ --text-secondary: #646464;
+ /* Other */
+ --outline: #DCDCDC;
+ 
+ /* ——————— Typography ——————— */
+ /* Fonts */
+ --font-family-primary: 'Roboto Serif', serif;
+ --font-family-secondary: 'Roboto', sans-serif;
+ /* Sizes */
+ --font-size-h1: 64px;
+ --font-size-h2: 40px;
+ --font-size-h3: 24px;
+ --font-size-P1: 24px;
+ --font-size-P2: 18px;
+ --font-size-Button-1: 18px;
+ --font-size-Button-2: 16px;
+ /* Weights */
+ --font-weight-h1: 500;
+ --font-weight-h2: 500;
+ --font-weight-h3: 700;
+ --font-weight-P1: 400;
+ --font-weight-P2: 400;
+ --font-weight-Button-1: 500;
+ --font-weight-Button-2: 500;
+ 
+ /* ——————— Space ——————— */
+ --space-8: 10px;
+ --space-16: 16px;
+ --space-24: 24px;
+ --space-32: 32px;
+ --space-48: 48px;
+ --space-64: 64px;
+ --space-96: 96px;
+ --space-128: 128px;
+ }
+ 
+ 
+ /* ——————— initial setup ————————— */
+ html,
+ body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-P2);
+  font-weight: var(--font-weight-P2);
+  background-color: var(--background);
+ }
+ 
+ 
+ /* ——————— Basic Styles ——————— */
+ h1 {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
   }
-  
-  
-  
-  
-  /* ——————— initial setup ————————— */
-  html,
-  body {
-   margin: 0;
-   padding: 0;
-   scroll-behavior: smooth;
-   font-family: var(--font-family-secondary);
-   font-size: var(--font-size-P2);
-   font-weight: var(--font-weight-P2);
-   background-color: var(--background);
+   h2 {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
   }
-  
-  
-  
-  
-  /* ——————— Basic Styles ——————— */
-  h1 {
-     font-family: var(--font-family-primary);
-     font-size: var(--font-size-h1);
-     font-weight: var(--font-weight-h1);
-   }
-    h2 {
-     font-family: var(--font-family-primary);
-     font-size: var(--font-size-h2);
-     font-weight: var(--font-weight-h2);
-   }
-    h3 {
-     font-family: var(--font-family-primary);
-     font-size: var(--font-size-h3);
-     font-weight: var(--font-weight-h3);
-   }
-  
-  
-   button {
-     font-family: var(--font-family-secondary);
-     font-size: var(--font-size-button-1);
-     font-weight: var(--font-weight-button-1);
-     background-color: var(--card);
-     padding: var(--space-8) var(--space-24);
-     border: 1px solid var(--outline);
-     border-radius: var(--space-48);
-   }
-  
-  
-   p {
-     font-family: var(--font-family-secondary);
-     font-size: var(--font-size-P1);
-     font-weight: var(--font-weight-P1);
-     color: var(--text-secondary);
-   }
-  
+   h3 {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+  }
+ 
+  button {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-button-1);
+    font-weight: var(--font-weight-button-1);
+    background-color: var(--card);
+    padding: var(--space-8) var(--space-24);
+    border: 1px solid var(--outline);
+    border-radius: var(--space-48);
+  }
+ 
+  p {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-P1);
+    font-weight: var(--font-weight-P1);
+    color: var(--text-secondary);
+  }
    .secondary-p {
-     font-family: var(--font-family-secondary);
-     font-size: var(--font-size-P2);
-     font-weight: var(--font-weight-P2);
-     color: var(--text-secondary);
-   }
-  
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-P2);
+    font-weight: var(--font-weight-P2);
+    color: var(--text-secondary);
+  }
    a {
-     font-family: var(--font-family-secondary);
-     font-size: var(--font-size-button-2);
-     font-weight: var(--font-weight-Button-2);
-     color: var(--text-primary);
-     text-decoration: none;
-   }
-  
-  
-  
-  
-  
-  
-  /* ——————— ________ ——————— ________ ——————— */
-  
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-button-2);
+    font-weight: var(--font-weight-Button-2);
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+ 
+ 
+ 
+ /* ——————— ________ ——————— ________ ——————— */
   /* ——————— Main Grid ——————— */
-  .grid-container {
-    padding: 0 var(--space-128);
-    max-width: calc(12 * var(--space-128));
-    margin: 0 auto;
+ .grid-container {
+   padding: 0 var(--space-128);
+   max-width: calc(12 * var(--space-128));
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   gap: var(--space-24);
+   height: 100%;
+   align-content: space-between;
+   position: relative;
+ }
+
+
+
+
+ /* ——————— Nav ——————— */
+   .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / span 6;
+    padding: var(--space-24) 0;
+    margin-bottom: var(--space-48);
+  }
+   .nav img {
+    height: 40px;
+  }
+   .nav-links > :nth-child(1){
+    margin-right: var(--space-24);
+  }
+   .nav button {
+    font-size: var(--font-size-button-2);
+    font-weight: var(--font-weight-button-2);
+    background-color: var(--text-primary);
+    color: var(--card);
+  }
+
+
+/* ——————— Mobile Nav ——————— */
+ #menu-toggle {
+   display: none;
+ }
+  #menu-icon {
+   display: none;
+ }
+  #menu {
+   display: none;
+ }
+ 
+ /* ——————— Hero ——————— */
+   .hero {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: var(--space-24);
-    height: 100%;
-    align-content: space-between;
-    position: relative; 
+    gap: var(--space-48);
+    grid-column: 1 / span 6;
+    margin-bottom: var(--space-96);
   }
 
 
-  /* ——————— Nav ——————— */
-    .nav {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     grid-column: 1 / span 6;
-     padding: var(--space-24) 0;
-     margin-bottom: var(--space-48);
-   }
-  
-   .nav img {
-     height: 40px;
-   }
-  
-   .nav-links > :nth-child(1){
-     margin-right: var(--space-24);
-   }
-  
-   .nav button {
-     font-size: var(--font-size-button-2);
-     font-weight: var(--font-weight-button-2);
-     background-color: var(--text-primary);
-     color: var(--card);
-   }
-  
-  
-  /* ——————— Hero ——————— */
-    .hero {
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     gap: var(--space-48);
-     grid-column: 1 / span 6;
-     margin-bottom: var(--space-96);
-   }
-
-    .hero-copy {
-     grid-column: 1 / span 3;
-   }
-    .hero-img {
-     grid-column: 4 / span 6;
-     justify-self: end;
-     align-self: center;
-   }
-  
+   .hero-copy {
+    grid-column: 1 / span 3;
+  }
+   .hero-img {
+    grid-column: 4 / span 6;
+    justify-self: end;
+    align-self: center;
+  }
    .hero-img img {
-     width: 100%;
-     max-width: calc(6 * var(--space-128));
-     border-radius: var(--space-48);
-   }
-
-  /* ——————— Cards ——————— */
-    .card-container {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(2, 1fr);
-     column-gap: var(--space-48);
-     row-gap: var(--space-64);
-     grid-column: 1 / span 6;
-     margin-bottom: var(--space-128);
-   }
-    .card {
-     background-color: var(--card);
-     padding: var(--space-32) var(--space-48) var(--space-48 ) var(--space-48);
-     border-radius: var(--space-48);
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: start;
-     position: relative;
-     gap: var(--space-16);
-   }
-
-   .card-badge {
-    background-color: var(--accent-green);
-    color: var(--text-reversed);
-    padding: var(--space-8) var(--space-24) var(--space-8) var(--space-16);
-    border-radius: var(--space-24) 0 0 var(--space-24);
-    position: absolute;
-    top: -45px;
-    right: var(--space-24);
-    z-index: 1;
+    width: 100%;
+    max-width: calc(6 * var(--space-128));
+    border-radius: var(--space-48);
   }
 
-  .card-badge img {
-    width: 70px;
+
+ /* ——————— Cards ——————— */
+   .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: var(--space-48);
+    row-gap: var(--space-64);
+    grid-column: 1 / span 6;
+    margin-bottom: var(--space-128);
+  }
+   .card {
+    background-color: var(--card);
+    padding: var(--space-32) var(--space-48) var(--space-48 ) var(--space-48);
+    border-radius: var(--space-48);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    gap: var(--space-16);
   }
 
-  .highlight {
+
+  .card-badge {
+   background-color: var(--accent-green);
+   color: var(--text-reversed);
+   padding: var(--space-8) var(--space-24) var(--space-8) var(--space-16);
+   border-radius: var(--space-24) 0 0 var(--space-24);
+   position: absolute;
+   top: -45px;
+   right: var(--space-24);
+   z-index: 1;
+ }
+
+
+ .card-badge img {
+   width: 70px;
+ }
+
+
+ .highlight {
+   background-color: var(--accent);
+   padding: var(--space-16) var(--space-64) var(--space-48 ) var(--space-48);
+ }
+
+
+
+
+/* ——————— Footer ——————— */
+   .footer {
+    grid-column: 1 / span 6;
     background-color: var(--accent);
-    padding: var(--space-16) var(--space-64) var(--space-48 ) var(--space-48);
+    text-align: center;
+    padding: var(--space-24) 0;
+  }
+   .footer img {
+    height: 40px;
   }
 
 
- /* ——————— Footer ——————— */
-    .footer {
-     grid-column: 1 / span 6;
-     background-color: var(--accent);
-     text-align: center;
-     padding: var(--space-24) 0;
-   }
-  
-   .footer img {
-     height: 40px;
-   }
 
 
-  
-  
-  
+ 
    /* note for future me: use button-2 and P2 for media queries. thanks, bye */
+
+
+
+
+ 
+ /* ——————— Media Queries ——————— */
+ /* ——————— Tablet ———————  */
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+ /* ——————— XYZ ———————  */
+  
+ }
+ 
+ /* ——————— Mobile ———————  */
+   @media only screen and (max-width: 767px) {
+ /* ——————— Nav ———————  */
+ .nav {
+   display: none;
+ }
+
+
+ #menu-toggle {
+   display: none; /* hide the checkbox */
+ }
+  #menu-icon {
+   display: block; /* show the hamburger icon */
+   font-size: 1.5em; /* adjust the size of the icon */
+   cursor: pointer; /* add a pointer cursor */
+ }
+  #menu {
+   display: none; /* hide the menu by default */
+   list-style: none; /* remove bullets from the list */
+   margin: 0; /* remove default margin */
+   padding: 0; /* remove default padding */
+ }
+  /* Show the menu when the checkbox is checked */
+ #menu-toggle:checked ~ #menu {
+   display: block;
+ }
+}
+
+
+
+
+  /* note for future me: use button-2 and P2 for media queries. thanks, bye  */
