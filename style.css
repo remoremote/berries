@@ -97,6 +97,12 @@
      color: var(--text-secondary);
    }
   
+   .secondary-p {
+     font-family: var(--font-family-secondary);
+     font-size: var(--font-size-P2);
+     font-weight: var(--font-weight-P2);
+     color: var(--text-secondary);
+   }
   
    a {
      font-family: var(--font-family-secondary);
@@ -115,15 +121,17 @@
   
   /* ——————— Main Grid ——————— */
   .grid-container {
-     padding: 0 var(--space-128);
-     max-width: calc(12 * var(--space-128));
-     margin: 0 auto;
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     gap: var(--space-24);
-     height: 100%;
-     align-content: space-between;
-   }
+    padding: 0 var(--space-128);
+    max-width: calc(12 * var(--space-128));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-24);
+    height: 100%;
+    align-content: space-between;
+    position: relative; 
+  }
+
 
   /* ——————— Nav ——————— */
     .nav {
@@ -133,7 +141,7 @@
      align-items: center;
      grid-column: 1 / span 6;
      padding: var(--space-24) 0;
-     margin-bottom: var(--space-64);
+     margin-bottom: var(--space-48);
    }
   
    .nav img {
@@ -158,7 +166,7 @@
      grid-template-columns: repeat(6, 1fr);
      gap: var(--space-48);
      grid-column: 1 / span 6;
-     margin-bottom: var(--space-64);
+     margin-bottom: var(--space-96);
    }
 
     .hero-copy {
@@ -177,34 +185,61 @@
    }
 
   /* ——————— Cards ——————— */
-    .cards {
+    .card-container {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(2, 1fr);
-     gap: var(--space-24);
+     column-gap: var(--space-48);
+     row-gap: var(--space-64);
      grid-column: 1 / span 6;
+     margin-bottom: var(--space-128);
    }
     .card {
-     background-color: #bbb;
-     text-align: center;
-     padding: var(--space-8);
+     background-color: var(--card);
+     padding: var(--space-32) var(--space-48) var(--space-48 ) var(--space-48);
+     border-radius: var(--space-48);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: start;
+     position: relative;
+     gap: var(--space-16);
    }
+
+   .card-badge {
+    background-color: var(--accent-green);
+    color: var(--text-reversed);
+    padding: var(--space-8) var(--space-24) var(--space-8) var(--space-16);
+    border-radius: var(--space-24) 0 0 var(--space-24);
+    position: absolute;
+    top: -45px;
+    right: var(--space-24);
+    z-index: 1;
+  }
+
+  .card-badge img {
+    width: 70px;
+  }
+
+  .highlight {
+    background-color: var(--accent);
+    padding: var(--space-16) var(--space-64) var(--space-48 ) var(--space-48);
+  }
+
+
+ /* ——————— Footer ——————— */
     .footer {
      grid-column: 1 / span 6;
      background-color: var(--accent);
      text-align: center;
-     padding: var(--space-8);
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     right: 0;
+     padding: var(--space-24) 0;
    }
   
- /* ——————— Footer ——————— */
    .footer img {
      height: 40px;
    }
-  
+
+
   
   
   
