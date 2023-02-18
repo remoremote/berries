@@ -15,6 +15,7 @@
  --font-family-secondary: 'Roboto', sans-serif;
  /* Sizes */
  --font-size-h1: 64px;
+ --font-size-mobile-h1: 36px;
  --font-size-h2: 40px;
  --font-size-h3: 24px;
  --font-size-P1: 24px;
@@ -251,9 +252,42 @@
 
  
  /* ——————— Media Queries ——————— */
+/* ——————— Smaller Desktop Sizes ———————  */
+@media only screen and (min-width: 1071px) and (max-width: 1445px) {
+  .hero-copy h1 {
+    font-size: 4.1vw;
+  }
+
+  .hero-copy p {
+    font-size: 20px;
+  }
+}
+
  /* ——————— Tablet ———————  */
- @media only screen and (min-width: 768px) and (max-width: 1024px) {
- /* ——————— XYZ ———————  */
+ @media only screen and (min-width: 768px) and (max-width: 1070px) {
+ /* ——————— Nav ———————  */
+ .nav {
+    margin-bottom: var(--space-24);
+}
+ /* ——————— Hero ———————  */
+ .hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+  margin-bottom: var(--space-64);
+}
+
+ .hero-copy {
+  text-align: center;
+}
+ .hero-img {
+  align-self: center;
+}
+ .hero-img img {
+  width: 100%;
+  border-radius: var(--space-48);
+}
+
   
  }
  
@@ -263,7 +297,6 @@
  .nav {
    display: none;
  }
-
 
  #menu-toggle {
    display: none; /* hide the checkbox */
@@ -283,6 +316,36 @@
  #menu-toggle:checked ~ #menu {
    display: block;
  }
+
+/* ——————— Hero ———————  */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  margin-bottom: var(--space-96);
+}
+
+ .hero-copy {
+  text-align: center;
+}
+
+.hero-copy h1 {
+  font-size: var(--font-size-mobile-h1);
+}
+
+.hero-copy p {
+  font-size: var(--font-size-P2);
+}
+
+ .hero-img {
+  align-self: center;
+}
+ .hero-img img {
+  width: 100%;
+  border-radius: var(--space-48);
+}
+
+
 }
 
 
