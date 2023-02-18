@@ -16,9 +16,8 @@ Learning Outcomes:
 - Grid template areas are used correctly to display items at different positions in different viewports.
 - A functional hamburger menu is created and the design is consistent with the rest of the project.
 - Code passes HTML and CSS validators.
-- Coding style guidelines are followed
-- correctly, code is easy
-- to read and maintain. Spacing and indentation is consistent throughout the code.
+- Coding style guidelines are followed correctly, code is easy to read and maintain. 
+- Spacing and indentation is consistent throughout the code.
 - HTML5 semantic tags are used correctly to add meaning to the code.
 - Font-family for each component is used correctly as defined in the design file.
 - The icons are imported and used correctly.
