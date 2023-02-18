@@ -11,9 +11,9 @@ Learning Outcomes:
 - Incorporate media queries into the responsive design
 
 ——
-- Relative and absolute positioning are used correctly with the icons.
-- CSS Grid and FlexBox are used together to create the layout.
-- Grid template areas are used correctly to display items at different positions in different viewports.
+✓ Relative and absolute positioning are used correctly with the icons.
+✓ CSS Grid and FlexBox are used together to create the layout.
+✓ Grid template areas are used correctly to display items at different positions in different viewports.
 - A functional hamburger menu is created and the design is consistent with the rest of the project.
 - Code passes HTML and CSS validators.
 - Coding style guidelines are followed correctly, code is easy to read and maintain. 
