@@ -146,16 +146,6 @@
   }
 
 
-/* ——————— Mobile Nav ——————— */
- #menu-toggle {
-   display: none;
- }
-  #menu-icon {
-   display: none;
- }
-  #menu {
-   display: none;
- }
  
  /* ——————— Hero ——————— */
    .hero {
@@ -244,11 +234,6 @@
 
 
 
- 
-   /* note for future me: use button-2 and P2 for media queries. thanks, bye */
-
-
-
 
  
  /* ——————— Media Queries ——————— */
@@ -265,6 +250,10 @@
 
  /* ——————— Tablet ———————  */
  @media only screen and (min-width: 768px) and (max-width: 1070px) {
+  .grid-container {
+    padding: 0 var(--space-64);
+  }
+
  /* ——————— Nav ———————  */
  .nav {
     margin-bottom: var(--space-24);
@@ -279,43 +268,108 @@
 
  .hero-copy {
   text-align: center;
+  margin: 0 auto;
+  width: 90%;
 }
  .hero-img {
   align-self: center;
 }
  .hero-img img {
   width: 100%;
+  max-width: 100%;
   border-radius: var(--space-48);
 }
 
-  
- }
+/* ——————— Cards ——————— */
+.card-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
  
+
+
+/* ——————— Mobile Nav hidden for desktop & tablet ——————— */
+.mobile-nav-container {
+  display: none;
+}
+
  /* ——————— Mobile ———————  */
    @media only screen and (max-width: 767px) {
- /* ——————— Nav ———————  */
+  .grid-container {
+    padding: 0 var(--space-24);
+  }
+
+ /* ——————— Mobile Nav ———————  */
  .nav {
    display: none;
+  }
+ 
+.mobile-nav-container {
+  display: inline-block;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0 var(--space-48);
+}
+
+ .mobile-logo {
+  height: 40px;
  }
 
- #menu-toggle {
-   display: none; /* hide the checkbox */
- }
-  #menu-icon {
-   display: block; /* show the hamburger icon */
-   font-size: 1.5em; /* adjust the size of the icon */
-   cursor: pointer; /* add a pointer cursor */
- }
-  #menu {
-   display: none; /* hide the menu by default */
-   list-style: none; /* remove bullets from the list */
-   margin: 0; /* remove default margin */
-   padding: 0; /* remove default padding */
- }
-  /* Show the menu when the checkbox is checked */
- #menu-toggle:checked ~ #menu {
-   display: block;
- }
+ .mobile-nav{
+	width:100%; 
+	height:60px; 
+	line-height:60px;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color: var(--text-primary);
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color: var(--text-primary);
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+
+.glyphicon-home{
+  color:black; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+.mobile-nav{display:inline-block; font-size:12px;}
+span{padding-left:20px;}
+a{color:#336699;}
 
 /* ——————— Hero ———————  */
 .hero {
@@ -323,6 +377,7 @@
   flex-direction: column;
   gap: var(--space-24);
   margin-bottom: var(--space-96);
+  margin-top: var(--space-128);
 }
 
  .hero-copy {
@@ -343,6 +398,11 @@
  .hero-img img {
   width: 100%;
   border-radius: var(--space-48);
+}
+
+/* ——————— Cards ——————— */
+.card-container {
+  grid-template-columns: 1fr;
 }
 
 
