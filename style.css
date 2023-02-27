@@ -195,7 +195,6 @@
    .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     column-gap: var(--space-48);
     row-gap: var(--space-64);
     grid-column: 1 / span 6;
