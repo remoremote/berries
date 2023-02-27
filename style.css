@@ -17,6 +17,7 @@
  --font-size-h1: 64px;
  --font-size-mobile-h1: 36px;
  --font-size-h2: 40px;
+ --font-size-mobile-h2: 32px;
  --font-size-h3: 24px;
  --font-size-P1: 24px;
  --font-size-P2: 18px;
@@ -82,6 +83,12 @@
     border: 1px solid var(--outline);
     border-radius: var(--space-48);
   }
+
+  button:hover {
+    background-color: var(--text-primary);
+    color: var(--card);
+    cursor: pointer;
+  }
  
   p {
     font-family: var(--font-family-secondary);
@@ -89,12 +96,14 @@
     font-weight: var(--font-weight-P1);
     color: var(--text-secondary);
   }
+
    .secondary-p {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-P2);
     font-weight: var(--font-weight-P2);
     color: var(--text-secondary);
   }
+
    a {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-button-2);
@@ -121,7 +130,6 @@
 
 
 
-
  /* ——————— Nav ——————— */
    .nav {
     display: flex;
@@ -145,6 +153,17 @@
     color: var(--card);
   }
 
+  .nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .nav button:hover {
+    background-color: var(--card);
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+
 
  
  /* ——————— Hero ——————— */
@@ -155,7 +174,6 @@
     grid-column: 1 / span 6;
     margin-bottom: var(--space-96);
   }
-
 
    .hero-copy {
     grid-column: 1 / span 3;
@@ -172,6 +190,7 @@
   }
 
 
+
  /* ——————— Cards ——————— */
    .card-container {
     display: grid;
@@ -182,6 +201,7 @@
     grid-column: 1 / span 6;
     margin-bottom: var(--space-128);
   }
+
    .card {
     background-color: var(--card);
     padding: var(--space-32) var(--space-48) var(--space-48 ) var(--space-48);
@@ -194,9 +214,7 @@
     gap: var(--space-16);
   }
 
-
   .card-badge {
-   background-color: var(--accent-green);
    color: var(--text-reversed);
    padding: var(--space-8) var(--space-24) var(--space-8) var(--space-16);
    border-radius: var(--space-24) 0 0 var(--space-24);
@@ -206,17 +224,14 @@
    z-index: 1;
  }
 
-
  .card-badge img {
    width: 70px;
  }
-
 
  .highlight {
    background-color: var(--accent);
    padding: var(--space-16) var(--space-64) var(--space-48 ) var(--space-48);
  }
-
 
 
 
@@ -230,6 +245,64 @@
    .footer img {
     height: 40px;
   }
+
+
+
+
+/* ––––––– Modal –––––––– */
+#target-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 9999;
+}
+
+#target-content:target {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#target-inner {
+  position: absolute;
+  display: block;
+  padding: var(--space-48);
+  width: 70%;
+  max-width: calc(4 * var(--space-128));
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  background: var(--background);
+  z-index: 9999;
+  border-radius: var(--space-48);
+}
+
+#target-inner h2 {
+  margin-top: 0;
+}
+
+a.close {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  opacity: 0.5;
+  transition: opacity 200ms;
+}
+
+a.close:hover {
+  opacity: 0.4;
+}
+
+
 
 
 
@@ -290,6 +363,8 @@
  
 
 
+
+
 /* ——————— Mobile Nav hidden for desktop & tablet ——————— */
 .mobile-nav-container {
   display: none;
@@ -316,7 +391,6 @@
   .mobile-nav {
     display: flex;
     justify-content: space-between;
-    align-items: top;
     width: 100%;
     height: 60px;
     line-height: var(--space-48);
@@ -343,8 +417,13 @@
     cursor: pointer;
     z-index: 999;
   }
+
+  .hamburger:hover {
+    background-color: transparent;
+    color: var(--text-primary);
+  }
   
-  .cross {
+  .menu-close {
     background: none;
     position: absolute;
     top: var(--space-16);
@@ -357,6 +436,11 @@
     font-weight: 400;
     cursor: pointer;
     z-index: 1000;
+  }
+
+  .menu-close:hover {
+    background-color: transparent;
+    color: var(--text-primary);
   }
   
   .menu {
@@ -407,13 +491,15 @@
     color: var(--text-primary);
     text-decoration: none;
   }
-  
+
   .menu a {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-button-2);
     font-weight: var(--font-weight-Button-2);
     color: var(--text-primary);
     text-decoration: none;
+    display: block;
+    width: 100%;
   }
   
   .menu a:hover {
@@ -435,14 +521,12 @@
     cursor: pointer;
   }
   
-
-
 /* ——————— Hero ———————  */
 .hero {
   display: flex;
   flex-direction: column;
   gap: var(--space-24);
-  margin-bottom: var(--space-96);
+  margin-bottom: var(--space-32);
 }
 
  .hero-copy {
@@ -470,10 +554,19 @@
   grid-template-columns: 1fr;
 }
 
+.card {
+  padding: var(--space-32);
+  gap: 0;
+}
 
+/* ––––––– Modal ––––––– */
+#target-inner h2 {
+  font-size: var(--font-size-mobile-h2);
+}
+
+#target-inner p {
+  font-size: var(--font-size-P2);
 }
 
 
-
-
-  /* note for future me: use button-2 and P2 for media queries. thanks, bye  */
+}

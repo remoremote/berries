@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    $( ".cross" ).hide();
+    $( ".menu-close" ).hide();
     $( ".menu" ).hide();
     $( ".hamburger" ).click(function() {
         $( ".menu" ).css({
@@ -9,15 +9,16 @@ $( document ).ready(function() {
         });
         $( ".menu" ).slideToggle( "slow", function() {
             $( ".hamburger" ).hide();
-            $( ".cross" ).show();
+            $( ".menu-close" ).show();
         });
     });
     
-    $( ".cross" ).click(function() {
+    $( ".menu-close" ).click(function() {
         $( ".menu" ).slideToggle( "slow", function() {
-            $( ".cross" ).hide();
+            $( ".menu-close" ).hide();
             $( ".hamburger" ).show();
         });
     });
     
 });
+
