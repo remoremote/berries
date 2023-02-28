@@ -213,6 +213,10 @@
     gap: var(--space-16);
   }
 
+  .card:hover {
+    box-shadow: 10px 10px 20px 0px rgba(254,189,47,0.5);
+  }
+
   .card-badge {
    color: var(--text-reversed);
    padding: var(--space-8) var(--space-24) var(--space-8) var(--space-16);
@@ -232,6 +236,39 @@
    padding: var(--space-16) var(--space-64) var(--space-48 ) var(--space-48);
  }
 
+
+
+ /* ——————— Team ——————— */
+ .team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--space-48);
+  row-gap: var(--space-64);
+  grid-column: 1 / span 6;
+  margin-bottom: var(--space-128);
+}
+
+ .team {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--card);
+  padding: var(--space-32);
+  border-radius: var(--space-48);
+  justify-content: space-between;
+  gap: var(--space-24);
+  position: relative;
+}
+
+.team:hover {
+  box-shadow: 10px 10px 20px 0px rgba(254,189,47,0.5);
+}
+
+.team img {
+  height: calc(2 * var(--space-128));
+  width: calc(2 * var(--space-128));
+  object-fit: cover;
+  border-radius: var(--space-32);
+}
 
 
 /* ——————— Footer ——————— */
