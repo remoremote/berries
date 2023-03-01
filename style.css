@@ -58,17 +58,19 @@
  
  
  /* ——————— Basic Styles ——————— */
- h1 {
+  h1 {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-h1);
   }
-   h2 {
+
+  h2 {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-h2);
   }
-   h3 {
+
+  h3 {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-h3);
@@ -97,19 +99,23 @@
     color: var(--text-secondary);
   }
 
-   .secondary-p {
+  .secondary-p {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-P2);
     font-weight: var(--font-weight-P2);
     color: var(--text-secondary);
   }
 
-   a {
+  a {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-button-2);
     font-weight: var(--font-weight-Button-2);
     color: var(--text-primary);
     text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
  
  
@@ -237,11 +243,19 @@
  }
 
 
+  /* ——————— Team title ——————— */
+ .team-copy {
+  grid-column: 1 / span 6;
+  height: 100%;
+  /* This (margin-top) makes the layout feel smoother, but is not necessary.*/
+  margin-top: -96px;
+}
 
- /* ——————— Team ——————— */
+ /* ——————— Team (Inside container) ——————— */
  .team-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   column-gap: var(--space-48);
   row-gap: var(--space-64);
   grid-column: 1 / span 6;
@@ -250,11 +264,11 @@
 
  .team {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: var(--card);
   padding: var(--space-32);
   border-radius: var(--space-48);
-  justify-content: space-between;
   gap: var(--space-24);
   position: relative;
 }
@@ -265,10 +279,18 @@
 
 .team img {
   height: calc(2 * var(--space-128));
-  width: calc(2 * var(--space-128));
+  width: 100%;
   object-fit: cover;
   border-radius: var(--space-32);
 }
+
+.team .plain {
+  height: calc(2 * var(--space-128));
+  width: 100%;
+  border-radius: var(--space-32);
+  background-color: var(--accent);
+}
+
 
 
 /* ——————— Footer ——————— */
@@ -281,7 +303,6 @@
    .footer img {
     height: 40px;
   }
-
 
 
 
@@ -338,6 +359,59 @@ a.close:hover {
   opacity: 0.4;
 }
 
+/* ––––––– Form (inside Modal) –––––––– */
+.waitlist-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: var(--space-24);
+
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-button-2);
+  font-weight: var(--font-weight-P2);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-P2);
+  font-weight: var(--font-weight-P2);
+  background-color: var(--background);
+  padding: var(--space-8) var(--space-24);
+  border: 1px solid var(--outline);
+  border-radius: var(--space-24);
+  color: var(--text-primary);
+  
+  width: 100%;
+  margin-top: var(--space-8);
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-button-1);
+  font-weight: var(--font-weight-button-1);
+  background-color: var(--card);
+  padding: var(--space-8) var(--space-24);
+  border: 1px solid var(--outline);
+  border-radius: var(--space-48);
+  color: var(--text-primary);
+  
+  display: block;
+  cursor: pointer;
+  margin-top: var(--space-24);
+  width: 100%;
+}
 
 
 
