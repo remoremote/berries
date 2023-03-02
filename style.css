@@ -420,7 +420,12 @@ input[type="submit"] {
 
 
  
- /* ——————— Media Queries ——————— */
+         /*  Media Queries Section  */
+/* ——————— ________ ——————— ________ ——————— */
+/* _______ ———————– _______ ———————– _______ */
+/* ——————— ________ ——————— ________ ——————— */
+/* _______ ———————– _______ ———————– _______ */
+
 /* –––––– This first thing is for about us only, and only involves the team cards –––––– */
 @media only screen and (min-width: 1446px) and (max-width: 1595px) {
   .team-container {
@@ -525,7 +530,6 @@ input[type="submit"] {
 
 }
  
-
 
 
 
