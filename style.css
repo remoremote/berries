@@ -372,7 +372,6 @@ h2 {
 label {
   display: block;
   margin-top: var(--space-24);
-
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-button-2);
   font-weight: var(--font-weight-P2);
@@ -391,7 +390,6 @@ textarea {
   border: 1px solid var(--outline);
   border-radius: var(--space-24);
   color: var(--text-primary);
-  
   width: 100%;
   margin-top: var(--space-8);
   box-sizing: border-box;
@@ -406,11 +404,14 @@ input[type="submit"] {
   border: 1px solid var(--outline);
   border-radius: var(--space-48);
   color: var(--text-primary);
-  
+  cursor: not-allowed;
   display: block;
-  cursor: pointer;
   margin-top: var(--space-24);
   width: 100%;
+}
+
+::placeholder {
+  color: lightgray;
 }
 
 
@@ -420,6 +421,13 @@ input[type="submit"] {
 
  
  /* ——————— Media Queries ——————— */
+/* –––––– This first thing is for about us only, and only involves the team cards –––––– */
+@media only screen and (min-width: 1446px) and (max-width: 1595px) {
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* ——————— Smaller font size in hero for smaller Desktop Sizes ———————  */
 @media only screen and (min-width: 1271px) and (max-width: 1445px) {
   .hero-copy h1 {
@@ -429,9 +437,20 @@ input[type="submit"] {
   .hero-copy p {
     font-size: 20px;
   }
+
+  /* –––––– Team –––––– */
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-copy h1 {
+    font-size: 4.1vw;
+    margin-top: 0px;
+  }
+
 }
 
-/* ——————— Easrly change of card grid, to make it feel more fluent ———————  */
+/* ——————— Early change of card grid, to make it feel more fluent ———————  */
 @media only screen and (min-width: 1071px) and (max-width: 1270px) {
   .hero-copy h1 {
     font-size: 4.1vw;
@@ -444,6 +463,17 @@ input[type="submit"] {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* –––––– Team –––––– */
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-copy h1 {
+    font-size: 4.1vw;
+    margin-top: 0px;
+  }
+
 }
 
  /* ——————— Tablet ———————  */
@@ -483,6 +513,15 @@ input[type="submit"] {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* –––––– Team –––––– */
+.team-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.team-copy h1 {
+  margin-top: var(--space-64);
+  text-align: center;
+}
 
 }
  
@@ -693,5 +732,23 @@ input[type="submit"] {
   font-size: var(--font-size-P2);
 }
 
+/* –––––– Team –––––– */
+.team-container {
+  grid-template-columns: 1fr;
+}
+
+.team-copy h1 {
+  margin-top: var(--space-96);
+  text-align: center;
+  font-size: var(--font-size-mobile-h1);
+}
+
+.team {
+  padding: var(--space-32);
+}
+
+.team img {
+  height: 100%;
+}
 
 }
